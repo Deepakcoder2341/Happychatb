@@ -1,0 +1,182 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* Login Container */
+.login-container {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Header Section */
+.login-header .bot-icon {
+    font-size: 45px;
+    color: #60a5fa;
+    margin-bottom: 10px;
+    background: rgba(96, 165, 250, 0.1);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+.login-header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.login-header p {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+/* Form Styles */
+.login-form {
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    color: #cbd5e1;
+    margin-bottom: 6px;
+}
+
+.input-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-field i {
+    position: absolute;
+    left: 14px;
+    color: #64748b;
+    font-size: 16px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 12px 14px 12px 42px;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-field input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+}
+
+.toggle-password {
+    left: auto !important;
+    right: 14px;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.toggle-password:hover {
+    color: #94a3b8;
+}
+
+/* Options (Remember Me & Forgot Password) */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #cbd5e1;
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Submit Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.login-btn:hover {
+    background: linear-gradient(90deg, #1d4ed8, #2563eb);
+}
+
+.login-btn:active {
+    transform: scale(0.98);
+}
+
+/* Footer Section */
+.login-footer {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.login-footer a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}

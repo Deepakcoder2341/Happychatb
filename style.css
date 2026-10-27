@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, sans-serif;
+background: linear-gradient(135deg, #e9e5ff, #e1f1ff);
+color: #202958;
+min-height: 100vh;
+padding: 20px;
+}
+
+.app {
+display: flex;
+width: 100%;    
+max-width: 1500px;
+height: min(900px, calc(100vh - 40px));
+min-height: 450px;
+margin: auto;
+background: white;
+border-radius: 24px;
+overflow: hidden;
+box-shadow: 0 15px 50px #8294e844;
+}
+
+/* Sidebar headings as clickable buttons */
+
+.sidebar-link {
+display: block;
+width: 100%;
+text-align: left;
+background: transparent;
+color: rgb(153, 128, 128);
+font-size: 15px;
+font-weight: bold;
+padding: 5px 0;
+cursor: pointer;
+}
+
+.sidebar-link:hover {
+    color: #bba7ff;
+}
+
+.sidebar h1 {
+font-size: 2px;
+text-align: center;
+margin-bottom: 12px;
+}
+
+.sidebar > p {
+text-align: center;
+color: #c9d4ff;
+line-height: 1.6;
+margin-bottom: 25px;
+}
+
+button {
+cursor: pointer;
+border: none;
+font: inherit;
+}
+
+#newChat {
+background: linear-gradient(135deg, #7958ff, #a17aff);
+color: white;
+padding: 13px;
+border-radius: 12px;
+margin-bottom: 25px;
+}
+
+.sidebar h3 {
+font-size: 15px;
+margin-bottom: 15px;
+}
+
+#chatHistory {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+/* History items */
+
+.history-item {
+color: #dce3ff;
+padding: 10px;
+border-radius: 8px;
+font-size: 14px;
+overflow-wrap: anywhere;
+cursor: pointer;
+background: rgba(255, 255, 255, 0.05);
+}
+
+.history-item:hover {
+    background: rgba(161, 122, 255, 0.25);
+}
+
+/*Dark Theme */
+ body.dark-mode {
+    background: #101426;
+    color: #f1f2ff;
+ }
+
+ body.dark-mode .app {
+    background: #171b30;
+ }
+
+ body.dark-mode .chat-area {
+    background: #171b30;
+ }
+
+ body.dark-mode .header {
+    border-bottom-color: #303650;
+ }
+ body.dark-mode .message-form {
+    background: #232943;
+    border-color:41496b;
+ }
+ body.dark-mode .message-form input {
+background: transparent;
+color: white;
+ }
+body.dark-mode .bot-message {
+background: #303653;
+color: white;
+}
+
+
+
+body.dark-mode #themeButton {
+    background: #303653;
+}
+
+.sidebar-footer {
+margin-top: auto;
+color: #dce3ff;
+line-height: 2.8;
+}
+
+/* Main chat area */
+
+.chat-area {
+flex: 1;
+min-width: 0;
+display: flex;
+flex-direction: column;
+background: #fcfcff;
+}
+
+.header {
+min-height: 95px;
+padding: 20px 28px;
+border-bottom: 1px solid #e6e6fa;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 12px;
+}
+
+.header h2 {
+font-size: 25px;
+margin-bottom: 6px;
+}
+
+.header p {
+color: #6775a5;
+}
+
+#themeButton {
+background: #f0edff;
+border-radius: 50%;
+width: 45px;
+height: 45px;
+flex-shrink: 0;
+}
+
+/* Messages */
+
+.messages {
+flex: 1;
+min-height: 0;
+overflow-y: auto;
+padding: 25px;
+display: flex;
+flex-direction: column;
+gap: 16px;
+}
+
+.welcome {
+margin: auto;
+text-align: center;
+line-height: 1.8;
+}
+
+.robot {
+font-size: 75px;
+margin-bottom: 12px;
+}
+
+.welcome h2 {
+margin-bottom: 8px;
+}
+
+.welcome p {
+color: #56658f;
+}
+
+.message {
+max-width: 80%;
+padding: 12px 16px;
+border-radius: 16px;
+line-height: 1.5;
+overflow-wrap: anywhere;
+white-space: pre-wrap;
+}
+
+.user-message {
+align-self: flex-end;
+background: #7958ff;
+color: white;
+}
+
+.bot-message {
+align-self: flex-start;
+background: #efedff;
+color: #202958;
+}
+
+/* Message input */
+
+.message-form {
+display: flex;
+gap: 10px;
+padding: 15px;
+margin: 0 20px 20px;
+border: 1px solid #dedfff;
+border-radius: 18px;
+background: white;
+}
+
+.message-form input {
+flex: 1;
+min-width: 0;
+border: none;
+outline: none;
+font-size: 16px;
+color: #202958;
+}
+
+.message-form button {
+width: 45px;
+height: 45px;
+flex-shrink: 0;
+border-radius: 50%;
+background: #7958ff;
+color: white;
+font-size: 23px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 650px) {
+body {
+padding: 0;
+}
+
+.app {
+    height: 100vh;
+    min-height: 450px;
+    border-radius: 0;
+
+}
+    .sidebar {
+    display: none;
+}
+
+.header {
+    min-height: 80px;
+    padding: 15px;
+}
+
+.header h2 {
+    font-size: 21px;
+}
+
+.messages {
+    padding: 15px;
+}
+
+.welcome {
+    font-size: 14px;
+}
+
+.robot {
+    font-size: 55px;
+}
+
+.message-form {
+    margin: 0 10px 10px;
+    padding: 10px;
+}
+}

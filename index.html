@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HappyChat - Your Friendly AI Companion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h1>🤖 HappyChattt 💜</h1>
+        <p>Good Vibes<br>Better Conversations ♡</p>
+
+        <button id="newChat">+ New Chat</button>
+
+        <h3>
+            <button class="sidebar-link" id="recentChatsButton">
+            Recent Chats 
+            </button>
+        </h3>
+
+        <h3>
+            <button class="sidebar-link" id="chatHistoryButton">Chat History
+            </button>
+        </h3>
+
+        <h3>
+            <button class="sidebar-link" id="deleteHistoryButton">Delete History</button>
+        </h3>
+        <div id="chatHistory"></div>
+
+        <div class="sidebar-footer">
+            <p>⚙️ Settings</p>
+            <p>💗 Stay Happy 😊</p>
+        </div>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-area">
+
+        <header class="header">
+            <div>
+                <h2>HappyChat 💜</h2>
+                <p>Your friendly AI companion</p>
+            </div>
+            <button id="themeButton" aria-label="Toggle theme">☀️</button>
+        </header>
+
+        <section class="messages" id="messages" aria-live="polite">
+            <div class="welcome" id="welcome">
+                <div class="robot">🤖</div>
+                <h2>Hi there! 👋</h2>
+                <p>I'm HappyChat, your friendly chatbot.</p>
+                <p>Ask me anything, and I'll do my best to help!</p>
+            </div>
+        </section>
+
+        <form class="message-form" id="messageForm">
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Type your message..."
+                aria-label="Your message"
+                autocomplete="off"
+                required
+            >
+            <button type="submit">➤</button>
+        </form>
+
+    </main>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
